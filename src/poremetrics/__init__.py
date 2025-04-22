@@ -7,5 +7,4 @@ from invert_mask import invert_mask
 from sharpness import find_sharpness as max_sharpness
 from perimeter_coverage import perimeter_coverage as edge_portion
 from extract_largest_object import extract_largest_object
-from read_img import read_img
 from unfilled_ratio import unfilled_ratio
