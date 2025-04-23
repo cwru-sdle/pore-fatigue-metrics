@@ -17,11 +17,11 @@ classifiers = [
 dependencies = [
   "matplotlib",
   "pandas",
-  "opencv-python",  # Use the correct pip package name for OpenCV
+  "opencv-python",
 ]
 
 [project.urls]
-Homepage = "https://github.com/anthony-lino/"
+Homepage = "https://github.com/cwru-sdle/pore-fatigue-metrics"
 
 [build-system]
 requires = ["setuptools", "wheel"]
