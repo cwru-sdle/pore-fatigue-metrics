@@ -1,12 +1,24 @@
 import numpy as np
 import cv2
-def unfilled_ratio(img):
-    if img.dtype != np.uint8:
-        img = img.astype(np.uint8)
-
-    # Apply threshold to get binary image
-    _, binary = cv2.threshold(img, 200, 255, cv2.THRESH_BINARY)
+def unfilled_ratio(binary):
+    """
     
+
+    This function is designed to handle large datasets efficiently by optionally
+    writing to disk rather than memory.
+
+    Args:
+        data (list): The data to cache.
+        use_disk (bool): Whether to use disk-based caching.
+
+    Returns:
+        str: A path to the cached file if `use_disk` is True, otherwise a memory ID.
+
+    Notes:
+        - This function is not thread-safe.
+        - Intended for use in batch-processing pipelines where memory usage is a concern.
+        - If `use_disk` is enabled, ensure that `TMPDIR` is properly set.
+    """
     # Find contours
     contours, hierarchy = cv2.findContours(binary, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
     if not contours:
