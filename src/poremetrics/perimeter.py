@@ -1,4 +1,6 @@
 import cv2
+import numpy as np
+
 def get_perimeter(binary_image: np.array) -> float:
     """
     Get the perimeter of the shape in the image.
