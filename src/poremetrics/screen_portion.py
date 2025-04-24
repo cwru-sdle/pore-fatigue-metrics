@@ -1,5 +1,5 @@
 import numpy as np
-def find_area(mask: np.ndarray) -> float:
+def screen_portion(mask: np.ndarray) -> float:
     """
     Finds the portion of pixels taken up by the mask.
 
@@ -9,4 +9,4 @@ def find_area(mask: np.ndarray) -> float:
     Returns:
         float: The portion of the image taken up by the mask. Range of [0,1].
     """
-    return float(np.sum(mask) / 255)
+    return float(np.sum(mask) / mask.size*255)
