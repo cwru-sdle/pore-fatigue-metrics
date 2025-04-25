@@ -2,6 +2,12 @@
 import numpy as np
 import cv2
 import skimage.draw
+import os
+
+def get_file_path(filename:str) -> str:
+    data_dir = os.path.join(os.path.dirname(__file__), 'data')
+    img_path = os.path.join(data_dir, filename)
+    return img_path
 
 def make_rectangle(array_size: int=1024,x_length:int=100,y_length:int=100) -> np.ndarray:
     if array_size<x_length:
