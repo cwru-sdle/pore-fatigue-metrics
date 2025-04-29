@@ -1,3 +1,5 @@
+# Plan is to have this be in every function of the package, so good errors are given
+
 import numpy as np
 
 def validate(array):
