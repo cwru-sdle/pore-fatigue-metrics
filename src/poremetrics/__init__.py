@@ -13,4 +13,6 @@ from .validate_data import validate
 from .centroid import centroid
 from .points_to_mask import points_to_mask
 from .circularity_area import circularity_area 
-__all__=['aspect_ratio_min','pixel_area','perimeter','aspect_ratio','fill_mask_holes','max_sharpness','edge_portion','extract_largest_object','screen_portion','centroid','validate','points_to_mask','largest_region','circularity_area']
+from .convex_hull_perimeter import convex_perimeter
+from .solidity import solidity
+__all__=['aspect_ratio_min','pixel_area','perimeter','aspect_ratio','fill_mask_holes','max_sharpness','edge_portion','extract_largest_object','screen_portion','centroid','validate','points_to_mask','largest_region','circularity_area','convex_perimeter','solidity']
