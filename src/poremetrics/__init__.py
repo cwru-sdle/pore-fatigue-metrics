@@ -12,4 +12,8 @@ from .extract_largest_object import extract_largest_object as largest_region
 from .validate_data import validate
 from .centroid import centroid
 from .points_to_mask import points_to_mask
-__all__=['aspect_ratio_min','pixel_area','perimeter','aspect_ratio','fill_mask_holes','max_sharpness','edge_portion','extract_largest_object','screen_portion','centroid','validate','points_to_mask','largest_region']
+from .circularity_area import circularity_area 
+from .convex_hull_perimeter import convex_perimeter
+from .solidity import solidity
+from .convexity import convexity
+__all__=['aspect_ratio_min','pixel_area','perimeter','aspect_ratio','fill_mask_holes','max_sharpness','edge_portion','extract_largest_object','screen_portion','centroid','validate','points_to_mask','largest_region','circularity_area','convex_perimeter','solidity','convexity']
